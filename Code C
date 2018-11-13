@@ -1,0 +1,38 @@
+#include<stdio.h>
+ 
+int main()
+{
+    int n = 10;
+    int c = 1;
+    int r = n;
+    int line = 0;
+    int i, j;
+ 
+    //ค้นหาจำนวนบรรทัด
+    for(i = 0; i < r; i++)
+    {
+        for(j = 0; j <= i; j++)
+        {
+            r--;    
+        }   
+        line++;
+    }
+     
+    for(i = 0; i < n; i++)
+    {
+        line--;
+        for(j = 0; j < line; j++)
+        {
+            printf(" ");
+        }
+             
+        for(j = 0; j <= i; j++)
+        {
+            printf("%d ", c);
+            c++;
+            n--;
+        }
+        printf("\n");
+    }
+    return 0;
+}
